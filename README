@@ -1,7 +1,13 @@
 Rhosync Express 
 "Ask anything you want"
 
-Rhosync Express (RE) is a simplified version of Rhosync written in Sinatra rather than Ruby on Rails. RE implements the basic functionality needed to support the ASK protocol in approximately 50 lines of Ruby code. No database is required.
+Rhosync Express (RE) is a simplified version of Rhosync written in Sinatra rather than Ruby on Rails. RE implements the basic functionality needed to support rhosync's ASK protocol.
+
+Benefits
+
+* 50 lines of Ruby code making it easier to understand and extend
+* No database is required
+* Runs in less memory and with fewer resources than full rhosync rails application
 
 Dependencies
 
