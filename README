@@ -2,9 +2,19 @@ Rhosync Express
 
 Rhosync Express (RE) is a simplified version of Rhosync written in Sinatra rather than Ruby on Rails. RE implements the basic functionality needed to support the ASK protocol in approximately 50 lines of Ruby code. No database is required.
 
-To run RE
+Dependencies
+
+gem install sinatra
+
+Setup
+
+To run Rhosync Express, from the command line type
 
 ruby rhosync.rb
+
+then to test navigate to
+
+http://127.0.0.1:4567/apps/Wikipedia/sources/Wikipedia/ask?question=pizza
 
 For best results, I recommend running under Phusion Passenger. I have included a config.ru file for that.
 
