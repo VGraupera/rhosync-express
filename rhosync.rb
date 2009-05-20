@@ -2,6 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'json'
 require 'activesupport'
+require 'time'
 
 require 'object_value'
 require 'source'
@@ -20,7 +21,11 @@ end
 
 get '/apps/:app_name/sources/:source_name/clientcreate' do
   content_type "application/json"
-  { "client" => {"client_id"=>rand(1000).to_s} }.to_json
+  { "client" => { "client_id"=> "1c857a6d-f6c2-409f-9c5b-314287ce3011",
+                  "updated_at" => Time.now.iso8601, "created_at" => Time.now.iso8601,
+                  "session" => nil, "user_id" => nil, "last_sync_token" =>nil
+                }  
+  }.to_json
 end
 
 # the "real work" begins here

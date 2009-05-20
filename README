@@ -1,20 +1,20 @@
-Rhosync Express 
+== Rhosync Express 
 "Ask anything you want"
 
 Rhosync Express (RE) is a simplified version of Rhosync written in Sinatra rather than Ruby on Rails. RE implements the basic functionality needed to support rhosync's ASK protocol.
 
-Benefits
+== Benefits
 
 * 50 lines of Ruby code making it easier to understand and extend
 * No database is required
 * Runs in less memory and with fewer resources than full rhosync rails application
 
-Dependencies
+== Dependencies
 
 gem install sinatra 
 gem install activesupport (required by Wikipedia adapter)
 
-Setup
+== Setup
 
 To run Rhosync Express, from the command line type
 
@@ -25,6 +25,8 @@ then to test navigate to
 http://127.0.0.1:4567/apps/Wikipedia/sources/Wikipedia/ask?question=pizza
 
 For best results, I recommend running under Phusion Passenger. I have included a config.ru file for that.
+
+== Future Plans
 
 RE currently is hardcoded to serve up the Wikipedia adapter. Included is a slightly simplified version of current wikipedia source adapter from rhosync. You can change RE to use your own adapter. In the future, I plan to provide a way to plug in your own adapter more easily and some configuration options.
 
