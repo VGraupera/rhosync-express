@@ -11,11 +11,9 @@ require 'wikipedia'
 
 # the following two calls are to stub out the authentication used by rhosync
 
-enable :sessions
-
 post '/apps/:app_name/sources/:source_name/client_login' do
   # return cookie with rhosync_session
-  session["rhosync_session"] = [rand(1000).to_s]
+  response.set_cookie("rhosync_session", "12345678901234567890;")
   status 200
 end
 
