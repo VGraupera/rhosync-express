@@ -89,6 +89,12 @@ class Wikipedia
     response, data = fetch(path, headers)
     data = rewrite_urls(data)
     
+    if development? # log what we are about to send befor packing
+      f = File.open(File.join("log", "#{search}.html"), 'w')  
+      f.write(data)  
+      f.close
+    end
+    
     [data].pack("m").gsub("\n", "")
   end
   
